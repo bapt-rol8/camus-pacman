@@ -21,3 +21,28 @@ class PacMan (object):
         
         
 pacman1=PacMan("yellow")
+
+
+
+
+
+
+import pygame
+
+pygame.init()
+
+
+fenetre = pygame.display.set_mode((640, 480), pygame.RESIZABLE)
+
+perso = pygame.image.load("PacMan.jpg").convert_alpha()
+fenetre.blit(perso, (200,300))
+
+#Rafraîchissement de l'écran
+pygame.display.flip()
+
+#BOUCLE INFINIE
+continuer = 1
+while continuer:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			continuer=0
