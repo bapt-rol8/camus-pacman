@@ -5,19 +5,6 @@
 Ceci est un script temporaire.
 """ 
 import pygame
-# BOUCLE DE JEU
-clock = pygame.time.Clock()
-while True:
-    
-	
-	
-
-# ... A COMPLETER AVEC LE CODE DE VOTRE JEU ...
-keys = pygame.key.get_pressed()
-  if keys[pygame.K_UP]:
-     print("flèche haut")
-	# MAJ DE L'AFFICHAGE
-	pygame.display.update()
 
 
 class Ghost (object):
@@ -31,8 +18,31 @@ class Ghost (object):
         self.y=self.y+dy
     
     
+   
     
     
+    pygame.init()
+    
+window = pygame.display.set_mode((640, 480))
+      
+background = pygame.image.load("background.jpg").convert()
+window.blit(background, (0,0))
+
+ghost = pygame.image.load("ghost_red.png").convert_alpha()
+
+window.blit(ghost, (200,300))
+pygame.display.flip()
+
+continuer = 1
+        
+while continuer:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            continuer = 0
+        
+
+    
+        
 
 
 
