@@ -18,16 +18,21 @@ fenetre = pygame.display.set_mode((640, 480))
 perso = pygame.image.load("perso.png").convert_alpha()
 wall = pygame.image.load("mur.jpg")
 wall2 = pygame.image.load("mur.jpg")
+fraise = pygame.image.load("fraise.jpg")
 position_perso = perso.get_rect()
 position_wall = wall.get_rect()
 position_wall2 = wall2.get_rect()
+position_fraise = fraise.get_rect()
 position_wall.x = 200
 position_wall.y = 200
 position_wall2.x = 100
 position_wall2.y = 100
+position_fraise.y = 269
+position_fraise.x = 512
 fenetre.blit(perso, position_perso)
 fenetre.blit(wall, position_wall)
 fenetre.blit(wall2, position_wall2)
+fenetre.blit(fraise,position_fraise)
 #Rafraîchissement de l'écran
 pygame.display.flip()
 
@@ -58,6 +63,7 @@ while continuer:
     fenetre.blit(perso, position_perso)
     fenetre.blit(wall, position_wall)
     fenetre.blit(wall2, position_wall2)
+    fenetre.blit(fraise,position_fraise)
     #Rafraichissement
     pygame.display.flip()
     
