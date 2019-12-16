@@ -10,14 +10,20 @@ import pygame
 
 pygame.init()
 
-ecran = pygame.display.set_mode((300,200))
+ecran = pygame.display.set_mode((750,750))
 
-continuer = True
+wall = pygame.image.load("wall brick.png").convert_alpha()
+ecran.blit(wall, (50,50))
+ecran.blit(wall, (50,0))
+
+pygame.display.flip()
+
+continuer = 1
 
 while continuer :
     for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
-            continuer = False
+        if event.type == pygame.QUIT:
+            continuer = 0
 
 pygame.quit()
 
