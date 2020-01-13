@@ -21,10 +21,10 @@ liste_wall = []
 with open('lvl1.txt', "r") as file:
     for y,line in enumerate(file):
         for x,carac in enumerate(line):
-            print (carac)
             if carac=="o":
+                print (carac,x,y)
                 liste_wall.append((x, y))
-            
+                
   
 
 
